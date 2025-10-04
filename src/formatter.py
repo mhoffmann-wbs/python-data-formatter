@@ -28,7 +28,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     df['unit_price'].fillna(0, inplace=True)
 
     # Calculate total price (BUG: uses addition instead of multiplication)
-    df['total_price'] = df['quantity'] + df['unit_price']
+    df['total_price'] = df['quantity'] * df['unit_price']
 
     return df
 
