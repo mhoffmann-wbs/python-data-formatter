@@ -25,7 +25,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     df['unit_price'] = pd.to_numeric(df['unit_price'], errors='coerce')
 
     # Impute missing unit_price with 0 (BUG)
-    df['unit_price'].fillna(df['unit_price'].mean(), inplace=True)
+    df['unit_price'] = df['unit_price'].fillna(df['unit_price'].mean())
 
     # Calculate total price (BUG: uses addition instead of multiplication)
     df['total_price'] = df['quantity'] + df['unit_price']
