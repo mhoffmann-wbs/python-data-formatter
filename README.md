@@ -7,3 +7,5 @@ A tool to clean sales data from a CSV file.
 To run the script, use the command:
 
 `python formatter.py`
+
+# ...
