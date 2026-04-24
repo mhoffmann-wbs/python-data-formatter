@@ -2,7 +2,7 @@ import argparse
 import pandas as pd
 from pathlib import Path
 
-#def clean_data(df: pd.DataFrame) -> pd.DataFrame:
+def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Cleans the raw sales data.
 
